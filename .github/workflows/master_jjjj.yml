@@ -30,14 +30,7 @@ jobs:
           source venv/bin/activate
       
       - name: Install Dependencies
-        run: |
-          python -m pip install --upgrade pip
-          # install numpy in the global env
-          pip install numpy
-          # now install scikit-learn without PEP-517 isolation
-          pip install --no-use-pep517 scikit-learn
-          # finally install the rest
-          pip install -r requirements.txt
+        run: pip install -r requirements.txt
 
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
